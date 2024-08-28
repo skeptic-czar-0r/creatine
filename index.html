@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creatine Power! - Your 90's Guide to Gains</title>
+    <style>
+        body {
+            font-family: "Comic Sans MS", cursive;
+            background: #000000 url('/api/placeholder/800/600') repeat;
+            color: #00FF00;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #000080;
+            border: 5px outset #C0C0C0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 48px;
+            text-shadow: 2px 2px #FF00FF;
+            animation: rainbow 5s infinite;
+        }
+        .blink {
+            animation: blink 1s steps(1, end) infinite;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes rainbow {
+            0% { color: red; }
+            14% { color: orange; }
+            28% { color: yellow; }
+            42% { color: green; }
+            57% { color: blue; }
+            71% { color: indigo; }
+            85% { color: violet; }
+            100% { color: red; }
+        }
+        .menu {
+            background-color: #C0C0C0;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .menu a {
+            color: #000080;
+            text-decoration: none;
+            padding: 5px 10px;
+            font-weight: bold;
+        }
+        .content {
+            background-color: #000000;
+            border: 3px inset #C0C0C0;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        #visitor-counter {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .flash {
+            animation: flash 0.5s infinite;
+        }
+        @keyframes flash {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .flex-image {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border: 5px ridge #FF00FF;
+            box-shadow: 0 0 15px #00FFFF;
+        }
+        .neon-text {
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+        }
+        .guestbook {
+            background-color: #800080;
+            border: 3px groove #00FFFF;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .guestbook textarea {
+            width: 100%;
+            height: 100px;
+            background-color: #000000;
+            color: #00FF00;
+            border: 2px inset #C0C0C0;
+        }
+        .guestbook button {
+            background-color: #FF00FF;
+            color: #FFFFFF;
+            border: 2px outset #C0C0C0;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .under-construction {
+            background: repeating-linear-gradient(45deg, #FFD700, #FFD700 10px, #000000 10px, #000000 20px);
+            color: #FF0000;
+            font-weight: bold;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .geocities {
+            font-size: 12px;
+            color: #0000FF;
+            text-decoration: underline;
+            margin-top: 20px;
+        }
+        .flame-text {
+            background-image: url('flame.gif');
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .hit-counter {
+            background-color: #000000;
+            color: #FF0000;
+            font-family: "Digital", monospace;
+            font-size: 24px;
+            padding: 5px;
+            border: 2px inset #C0C0C0;
+            display: inline-block;
+        }
+        .midi-player {
+            margin-top: 20px;
+        }
+        .spinning-logo {
+            animation: spin 5s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .cursor-trail {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #FF00FF;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .media-player {
+            background: linear-gradient(to bottom, #c0c0c0, #808080);
+            border: 3px outset #d0d0d0;
+            padding: 10px;
+            margin: 20px 0;
+            font-family: "MS Sans Serif", Arial, sans-serif;
+        }
+        .player-controls {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .player-controls button {
+            background: #d0d0d0;
+            border: 2px outset #ffffff;
+            padding: 5px 10px;
+            margin: 0 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .player-controls button:active {
+            border-style: inset;
+        }
+        .volume-control {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .volume-control label {
+            margin-right: 10px;
+        }
+        .volume-control input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100px;
+            height: 10px;
+            background: #808080;
+            outline: none;
+        }
+        .volume-control input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #d0d0d0;
+            cursor: pointer;
+            border: 2px outset #ffffff;
+        }
+        .song-info {
+            background: #000080;
+            color: #00ff00;
+            padding: 5px;
+            text-align: center;
+            font-family: "Courier New", monospace;
+            font-weight: bold;
+            border: 2px inset #c0c0c0;
+        }
+        .custom-alert {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .alert-content {
+            background: #c0c0c0;
+            border: 3px outset #ffffff;
+            width: 300px;
+            font-family: "MS Sans Serif", Arial, sans-serif;
+        }
+        .alert-header {
+            background: #000080;
+            color: #ffffff;
+            padding: 2px 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .alert-header h2 {
+            font-size: 14px;
+            margin: 0;
+        }
+        .close-btn {
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .alert-body {
+            padding: 20px;
+            text-align: center;
+        }
+        .alert-footer {
+            text-align: center;
+            padding-bottom: 10px;
+        }
+        .alert-footer button {
+            background: #d0d0d0;
+            border: 2px outset #ffffff;
+            padding: 5px 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .alert-footer button:active {
+            border-style: inset;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Creatine Power!</h1>
+        <marquee class="blink" scrollamount="10">Welcome to the ultimate 90's creatine experience!</marquee>
+        
+        <div class="menu">
+            <a href="#what">What is Creatine?</a> |
+            <a href="#benefits">Benefits</a> |
+            <a href="#how">How to Use</a>
+        </div>
+        
+        <img src="flex.webp" alt="Muscular person flexing" class="flex-image" />
+        
+        <div class="media-player">
+            <div class="player-controls">
+                <button id="playPauseBtn" onclick="togglePlay()">▶ Play</button>
+                <button onclick="stopAudio()">■ Stop</button>
+            </div>
+            <div class="volume-control">
+                <label for="volumeSlider">Volume:</label>
+                <input type="range" id="volumeSlider" min="0" max="100" value="100" onchange="setVolume()">
+            </div>
+            <div class="song-info">Now Playing: cant_touch_this.mp3</div>
+        </div>
+        
+        <audio id="audioPlayer" loop>
+            <source src="cant_touch_this.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <div class="neon-text">
+            <h2>EXTREME GAINZ GUARANTEE!</h2>
+            <p>Use our creatine or be a LOSER forever!</p>
+        </div>
+        
+        <div class="guestbook">
+            <h3>Guestbook</h3>
+            <textarea placeholder="Leave your message, bro!"></textarea>
+            <button onclick="showCustomAlert('Thanks for signing our guestbook, dude!')">Sign Guestbook</button>
+        </div>
+        
+        <div class="under-construction">
+            <marquee>UNDER CONSTRUCTION - More muscle-building content coming soon!</marquee>
+        </div>
+        
+        <div class="geocities">
+            <p>Best viewed on Netscape Navigator at 800x600 resolution</p>
+            <img src="netscape.gif" alt="Netscape Now!" width="90" height="90" />
+            <img src="explorer.gif" alt="Internet Explorer" width="90" height="90" />
+        </div>
+        
+        <div class="content">
+            <h2 id="what">What is Creatine?</h2>
+            <p>Creatine is the <span class="flash">ULTIMATE</span> supplement for gaining MASSIVE MUSCLES! It's like rocket fuel for your muscles, bro!</p>
+            
+            <h2 id="benefits">Benefits of Creatine</h2>
+            <ul>
+                <li>HUGE GAINS!</li>
+                <li>EXPLOSIVE POWER!</li>
+                <li>RECOVERY LIKE A BEAST!</li>
+            </ul>
+            
+            <h2 id="how">How to Use Creatine</h2>
+            <p>Just mix it with water and chug it down! It's that easy to become a MUSCLE MONSTER!</p>
+        </div>
+        
+        <div class="flame-text">FEEL THE BURN!</div>
+
+        <img src="creatine-90s.webp" alt="Creatine Power Logo" class="spinning-logo" width="100" height="100">
+
+        <div class="hit-counter">
+            Total Hits: <span id="hit-count">000001</span>
+        </div>
+
+        <div id="visitor-counter">
+            Visitor Count: <span id="count">0</span>
+        </div>
+    </div>
+
+    <div id="customAlert" class="custom-alert">
+        <div class="alert-content">
+            <div class="alert-header">
+                <span class="close-btn" onclick="closeCustomAlert()">&times;</span>
+                <h2>Radical Message!</h2>
+            </div>
+            <div class="alert-body">
+                <p id="alertMessage"></p>
+            </div>
+            <div class="alert-footer">
+                <button onclick="closeCustomAlert()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Fake visitor counter
+        function updateCounter() {
+            const count = Math.floor(Math.random() * 1000) + 1;
+            document.getElementById('count').textContent = count;
+        }
+        
+        setInterval(updateCounter, 5000);
+        updateCounter(); // Initial update
+
+        // Cursor trail effect
+        document.addEventListener('mousemove', function(e) {
+            const trail = document.createElement('div');
+            trail.className = 'cursor-trail';
+            trail.style.left = e.pageX + 'px';
+            trail.style.top = e.pageY + 'px';
+            document.body.appendChild(trail);
+            setTimeout(() => {
+                trail.remove();
+            }, 500);
+        });
+
+        // Hit counter
+        function updateHitCounter() {
+            const hitCount = document.getElementById('hit-count');
+            let count = parseInt(hitCount.textContent);
+            count++;
+            hitCount.textContent = count.toString().padStart(6, '0');
+        }
+        updateHitCounter();
+
+        // Audio player functionality
+        const audioPlayer = document.getElementById('audioPlayer');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const volumeSlider = document.getElementById('volumeSlider');
+
+        function togglePlay() {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                playPauseBtn.textContent = '❚❚ Pause';
+            } else {
+                audioPlayer.pause();
+                playPauseBtn.textContent = '▶ Play';
+            }
+        }
+
+        function stopAudio() {
+            audioPlayer.pause();
+            audioPlayer.currentTime = 0;
+            playPauseBtn.textContent = '▶ Play';
+        }
+
+        function setVolume() {
+            audioPlayer.volume = volumeSlider.value / 100;
+        }
+
+        // Custom alert functionality
+        function showCustomAlert(message) {
+            document.getElementById('alertMessage').textContent = message;
+            document.getElementById('customAlert').style.display = 'flex';
+        }
+
+        function closeCustomAlert() {
+            document.getElementById('customAlert').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
